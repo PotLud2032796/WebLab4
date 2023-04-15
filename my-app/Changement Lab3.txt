@@ -1,0 +1,3 @@
+Jai creer des composantes de page pour blog et principal
+Components mis dans src au lieu de public
+html mis dans public
