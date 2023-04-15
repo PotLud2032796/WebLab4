@@ -10,6 +10,10 @@ import PageBlogComponent from './components/PageBlogComponent';
 import PagePrincipalComponent from './components/PagePrincipalComponent';
 import PageAjouterComponent from './components/PageAjouterComponent';
 
+//Dexie
+import { db } from './db';
+db.open();
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,7 +55,19 @@ const router = createBrowserRouter([
       fetch(`http://localhost:3000/blogs`, option)
       .then(response => response.json())
       .catch(error => console.error(error));
-      
+
+      //INDEXEDDB
+      db.blogs.add({
+        titre: blog.titre,
+        auteur: blog.auteur,
+        date: blog.date,
+        description: blog.description,
+        image1: blog.image1,
+        paragraphe1: blog.paragraphe1,
+        image2: blog.image2,
+        paragraphe2: blog.paragraphe2
+      })
+
       return redirect("/");
     }
   },
@@ -81,6 +97,13 @@ const router = createBrowserRouter([
       fetch(`http://localhost:3000/commentaires`, option)
       .then(response => response.json())
       .catch(error => console.error(error));
+
+      //INDEXEDDB
+      db.commentaires.add({
+        publication: comment.publication,
+        date: comment.date,
+        contenu: comment.contenu
+      })
       
       return redirect(`/Blog/${comment.publication}`);
     }

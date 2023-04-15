@@ -139,6 +139,24 @@
       "image2": "yeah",
       "paragraphe2": "yeah",
       "id": 13
+    },
+    {
+      "auteur": "1",
+      "image1": "2",
+      "titre": "3",
+      "paragraphe1": "4",
+      "image2": "5",
+      "paragraphe2": "6",
+      "id": 14
+    },
+    {
+      "auteur": "Test Dexie",
+      "image1": "indexDbimage1",
+      "titre": "",
+      "paragraphe1": "",
+      "image2": "",
+      "paragraphe2": "",
+      "id": 15
     }
   ],
   "commentaires": [
@@ -258,6 +276,12 @@
       "contenu": "ponn2",
       "date": "6/3/2023",
       "id": 19
+    },
+    {
+      "publication": "1",
+      "contenu": "123",
+      "date": "6/3/2023",
+      "id": 20
     }
   ]
 }
